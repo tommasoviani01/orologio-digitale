@@ -1,60 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px 13%;
-    background-color: #121317;
-}
-
-h1 {
-    color: #99ff20;
-    font-size: 10vw;
-    margin-bottom: -2.5vw;
-}
-
-p {
+.digital-clock {
+    background-color: #000;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 5vw;
-    font-weight: 700;
-    margin-bottom: 4vw;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 0 2rem;
+    border: 0.5rem solid #2d2d2d;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 10vh;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-.container .bx {
-    border-radius: 10px;
-    height: 14.25rem;
-    background: #21242b;
+.week {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #99ff20;
+    width: 3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: "Hack", monospace;
 }
 
-.container .bx .caption {
-    color: #b2b5ba;
-}
-
-.container .bx .counter {
+.week .active {
     color: #fff;
-    font-size: 5rem;
-    font-weight: 700;
+}
+
+.time {
+    font-family: "DS-Digital", monospace;
+    font-weight: bold;
+}
+
+.hour,
+.min,
+.dot {
+    display: inline-block;
+    font-size: 13rem;
+}
+
+.min {
+    display: math;
+}
+
+.invisible {
+    visibility: hidden;
 }
