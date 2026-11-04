@@ -1,124 +1,47 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    height: 100svh;
+.digital-clock {
+    background-color: #000;
+    color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: radial-gradient(circle, #501326, #200810 75%);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: white;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 0 2rem;
+    border: 0.5rem solid #2d2d2d;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 10vh;
 }
 
-.container {
+.week {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.heart {
-    position: relative;
-    width: 220px;
-    height: 200px;
-    cursor: pointer;
-    animation: heartbeat 1.5s infinite;
-    filter: drop-shadow(0 0 20px #ff174d);
-    -webkit-tap-highlight-color: transparent;
-}
-
-.heart svg {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-}
-
-.heart path {
-    fill: url(#heartGradient);
-}
-
-.message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    font-size: 23px;
+    align-items: center;
+    width: 3rem;
+    color: #2d2d2d;
     font-weight: bold;
-    text-shadow: 0 2px 8px #8b001e;
-    pointer-events: none;
-    padding-bottom: 5px;
+    font-family: "Hack", monospace;
 }
 
-.subtitle {
-    margin-top: 35px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #f4b7c6;
-    opacity: 0.8;
-    text-align: center;
+.week .active {
+    color: #fff;
 }
 
-.subtitle p {
-    font-size: 12px;
-    margin-top: 8px;
+.time {
+    font-family: "DS-Digital", monospace;
+    font-weight: bold;
 }
 
-.info {
-    margin-top: 100px;
-    margin-inline: 25px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    color: #f4b7c6;
-    opacity: 0.8;
-    text-align: center;
+.hour,
+.min,
+.dot {
+    display: inline-block;
+    font-size: 13rem;
 }
 
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    15% { transform: scale(1.08); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.05); }
-    60% { transform: scale(1); }
+.min {
+    display: math;
 }
 
-.particle {
-    position: fixed;
-    pointer-events: none;
-    font-size: 20px;
-    animation: fly 1.5s ease-out forwards;
-}
-
-@keyframes fly {
-    to {
-        transform: translate(var(--x), var(--y))
-                   rotate(360deg) scale(0);
-        opacity: 0;
-    }
-}
-
-@media (max-width: 400px) {
-    .heart {
-        width: 190px;
-        height: 175px;
-    }
-
-    .message {
-        font-size: 21px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .heart {
-        animation: none;
-    }
+.invisible {
+    visibility: hidden;
 }

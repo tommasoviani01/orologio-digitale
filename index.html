@@ -1,53 +1,31 @@
-
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#200810">
-    <title>Sorpresa per Johara ❤️</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Orologio digitale</title>
+    <link rel="icon" type="image/png" sizes="256x256"  href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" rel="stylesheet">
 </head>
-
 <body>
-
-    <div class="container">
-
-        <div class="heart" id="heart">
-            <svg viewBox="0 0 200 180">
-                <defs>
-                    <linearGradient id="heartGradient"
-                        x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#ff6685"/>
-                        <stop offset="50%" stop-color="#ff174d"/>
-                        <stop offset="100%" stop-color="#b00035"/>
-                    </linearGradient>
-                </defs>
-
-                <path d="M100 170
-                C80 145 10 100 10 55
-                C10 5 75 -5 100 40
-                C125 -5 190 5 190 55
-                C190 100 120 145 100 170 Z"/>
-            </svg>
-
-            <div class="message" id="message">
-                Ti voglio bene
-            </div>
+    <div class="digital-clock">
+        <div class="week">
+            <div class="active">DOM</div>
+            <div>LUN</div>
+            <div>MAR</div>
+            <div>MER</div>
+            <div>GIO</div>
+            <div>VEN</div>
+            <div>SAB</div>
         </div>
-
-        <div class="subtitle">UN PICCOLO PENSIERO PER <b>JOHARA</b>
-            <p>FATTO CON ❤️ DA TOMMY</p>
-            <p>PER UNA VERA AMICA</p>
+        <div class="time">
+            <div class="hour">12</div>
+            <div class="dot">:</div>
+            <div class="min">05</div>
         </div>
-
-        <div class="info">Sito realizzato interamente a mano da Tommy, utilizzando codice web e linguaggio di programmazione.</div>
-
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
